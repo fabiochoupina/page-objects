@@ -1,10 +1,10 @@
 # page-objects
 
-This is a simple project to present the page objects concept for the Wellington Testers Meetup. 
+This is a simple project used to present the page objects concept for the Wellington Testers Meetup. 
 
 ## Getting Started
 
-To clone and run this application, you'll need Git, Ruby and Bundler installed on your computer.
+To clone and run this application, you'll need Git, Ruby, Bundler and Geckodriver installed on your computer.
 From your command line:
 
 ```
