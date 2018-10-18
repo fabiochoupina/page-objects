@@ -3,13 +3,17 @@ Given("that I'm on the home page") do
 end
 
 Given("my name is {string} and my email is {string}") do |name, email|
-    find('input[data-aid="CONTACT_FORM_NAME"]').set name
-    find('input[data-aid="CONTACT_FORM_EMAIL"]').set email
+    @homepage.fill_personal_info(name,email)
+
+    # find('input[data-aid="CONTACT_FORM_NAME"]').set name
+    # find('input[data-aid="CONTACT_FORM_EMAIL"]').set email
   end
   
   When("I send the following message {string}") do |message|
     find('textarea[data-aid="CONTACT_FORM_MESSAGE"]').set message
-    find('button[type=submit]').click
+    @homepage.submit_message.click
+    
+    # find('button[type=submit]').click
   end
   
   Then("the message is sent successfully") do
